@@ -1,0 +1,47 @@
+<odoo>
+  <data>
+      <template id="report_equipo_view">
+        <t t-call="web.html_container">
+          <t t-foreach="docs" t-as="equipo">
+            <t t-call="web.external_layout">
+              <div class="page">
+                <h1>Módulo de Fútbol: Informe de Equipo</h1>
+                <div>
+                  <strong>Código del Equipo:</strong>
+                  <span t-field="equipo.name"/>
+                </div>
+                <div>
+                  <strong>Nombre Completo del Equipo:</strong>
+                  <span t-field="equipo.NombreCompletoEquipo"/>
+                </div>
+                <div>
+                  <strong>Ciudad del Equipo:</strong>
+                  <span t-field="equipo.CiudadDelEquipo"/>
+                </div>
+                <div>
+                  <strong>Provincia del Equipo:</strong>
+                  <span t-field="equipo.ProvinciaDelEquipo"/>
+                </div>
+                <div>
+                  <strong>Socios del Equipo:</strong>
+                  <span t-field="equipo.SociosDelEquipo"/>
+                </div>
+                <div>
+                  <strong>Presupuesto del Equipo:</strong>
+                  <span t-field="equipo.PresupuestoDelEquipo"/>
+                </div>
+                <div>
+                  <strong>Año de Creación del Equipo:</strong>
+                  <span t-field="equipo.AnioCreacionEquipo"/>
+                </div>
+                <div>
+                  <strong>Web del Equipo:</strong>
+                  <span t-field="equipo.URLEquipo"/>
+                </div>
+              </div>
+            </t>
+          </t>
+        </t>
+      </template>
+  </data>
+</odoo>

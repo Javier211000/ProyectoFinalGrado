@@ -1,0 +1,7 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+jugador_entrenador,jugador entrenador,model_futbol_jugador,futbol_entrenador,1,0,0,0
+equipo_entrenador,equipo entrenador,model_futbol_equipo,futbol_entrenador,1,0,0,0
+temporada_entrenador,temporada entrenador,model_futbol_temporada,futbol_entrenador,1,0,0,0
+jugador_ojeador,jugador ojeador,model_futbol_jugador,futbol_ojeador,1,1,1,1
+equipo_ojeador,equipo ojeador,model_futbol_equipo,futbol_ojeador,1,1,1,1
+temporada_ojeador,temporada ojeador,model_futbol_temporada,futbol_ojeador,1,1,1,1

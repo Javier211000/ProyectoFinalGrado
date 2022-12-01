@@ -1,0 +1,10 @@
+<odoo>
+  <data>
+    <record id="futbol_entrenador" model="res.groups">
+      <field name="name">Futbol / Entrenador</field>
+    </record>
+    <record id="futbol_ojeador" model="res.groups">
+      <field name="name">Futbol / Ojeador</field>
+    </record>
+  </data>
+</odoo>

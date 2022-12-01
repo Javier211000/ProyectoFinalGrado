@@ -1,0 +1,174 @@
+<odoo>
+  <data>
+    <record model="ir.ui.view" id="futbol.jugador_tree">
+      <field name="name">futbol.jugador.tree</field>
+      <field name="model">futbol.jugador</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="NombreCompletoJugador"/>
+          <field name="DorsalJugador"/>
+          <field name="EdadJugador"/>
+          <field name="PosicionJugador"/>
+          <field name="PiernaBuenaJugador"/>
+          <field name="JugadorRetirado"/>
+          <field name="URLJugador"/>
+        </tree>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="futbol.jugador_form">
+      <field name="name">futbol.jugador.form</field>
+      <field name="model">futbol.jugador</field>
+      <field name="arch" type="xml">
+        <form>
+          <group colspam="2" col="2">
+          <field name="name"/>
+          <field name="NombreCompletoJugador"/>
+          <field name="DorsalJugador"/>
+          <field name="EdadJugador"/>
+          <field name="PosicionJugador"/>
+          <field name="PiernaBuenaJugador"/>
+          <field name="JugadorRetirado"/>
+          <field name="URLJugador"/>
+          <field name="ImagenJugador" widget="image" height="64"/>
+          </group>
+        </form>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="futbol.jugador_search_view">
+      <field name="name">futbol.jugador.search</field>
+      <field name="model">futbol.jugador</field>
+      <field name="arch" type="xml">
+        <search>
+          <filter name="JugadoresRetirados" domain="[('JugadorRetirado','=',True)]"/>
+          <filter name="JugadoresNoRetirados" domain="[('JugadorRetirado','=',False)]"/>
+          <filter name="DiestroPiernaBuenaJugador" domain="[('PiernaBuenaJugador','=','Diestro')]"/>
+          <filter name="ZurdoPiernaBuenaJugador" domain="[('PiernaBuenaJugador','=','Zurdo')]"/>
+        </search>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="futbol.equipo_tree">
+      <field name="name">futbol.equipo.tree</field>
+      <field name="model">futbol.equipo</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="NombreCompletoEquipo"/>
+          <field name="CiudadDelEquipo"/>
+          <field name="ProvinciaDelEquipo"/>
+          <field name="SociosDelEquipo"/>
+          <field name="PresupuestoDelEquipo"/>
+          <field name="AnioCreacionEquipo"/>
+          <field name="URLEquipo"/>
+        </tree>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="futbol.equipo_form">
+      <field name="name">futbol.equipo.form</field>
+      <field name="model">futbol.equipo</field>
+      <field name="arch" type="xml">
+        <form>
+            <group colspam="2" col="2">
+            <field name="name"/>
+            <field name="NombreCompletoEquipo"/>
+            <field name="CiudadDelEquipo"/>
+            <field name="ProvinciaDelEquipo"/>
+            <field name="SociosDelEquipo"/>
+            <field name="PresupuestoDelEquipo"/>
+            <field name="AnioCreacionEquipo"/>
+            <field name="URLEquipo"/>
+            <field name="ImagenEquipo" widget="image" height="64"/>
+            </group>
+        </form>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="futbol.equipo_search_view">
+      <field name="name">futbol.equipo.search</field>
+      <field name="model">futbol.equipo</field>
+      <field name="arch" type="xml">
+        <search>
+          <filter name="PresupuestosAltosEquipos" domain="[('PresupuestoDelEquipo','&gt;',30000)]"/>
+          <filter name="PresupuestosBajosEquipos" domain="[('PresupuestoDelEquipo','&lt;=',30000)]"/>
+        </search>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="futbol.temporada_tree">
+      <field name="name">futbol.temporada.tree</field>
+      <field name="model">futbol.temporada</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="GolesJugadorEquipo"/>
+          <field name="AsistenciasJugadorEquipo"/>
+          <field name="GolesAsistenciasTotalesJugadorEquipo"/>
+          <field name="AniosJugadorEquipo"/>
+          <field name="jugadores"/>
+          <field name="equipos"/>
+        </tree>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="futbol.temporada_form">
+      <field name="name">futbol.temporada.form</field>
+      <field name="model">futbol.temporada</field>
+      <field name="arch" type="xml">
+        <form>
+          <group colspam="2" col="2">
+            <field name="name"/>
+            <field name="GolesJugadorEquipo"/>
+            <field name="AsistenciasJugadorEquipo"/>
+            <field name="GolesAsistenciasTotalesJugadorEquipo"/>
+            <field name="AniosJugadorEquipo"/>
+            <field name="jugadores"/>
+            <field name="equipos"/>
+        </group>
+        </form>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="futbol.temporada_search_view">
+      <field name="name">futbol.temporada.search</field>
+      <field name="model">futbol.temporada</field>
+      <field name="arch" type="xml">
+        <search>
+          <filter name="MaximosGoleadoresAsistentesTotales" domain="[('GolesAsistenciasTotalesJugadorEquipo','&gt;',25)]"/>
+          <filter name="PeoresGoleadoresAsistentesTotales" domain="[('GolesAsistenciasTotalesJugadorEquipo','&lt;=',25)]"/>
+        </search>
+      </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="futbol.jugador_action_window">
+      <field name="name">futbol.jugador_action_window</field>
+      <field name="res_model">futbol.jugador</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <record model="ir.actions.act_window" id="futbol.equipo_action_window">
+      <field name="name">futbol.equipo_action_window</field>
+      <field name="res_model">futbol.equipo</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <record model="ir.actions.act_window" id="futbol.temporada_action_window">
+      <field name="name">futbol.temporada_action_window</field>
+      <field name="res_model">futbol.temporada</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem name="Futbol" id="futbol.menu_root" groups="futbol_entrenador"/>
+    <menuitem name="Futbol" id="futbol.menu_root" groups="futbol_ojeador"/>
+    <menuitem name="Jugadores" id="futbol.jugador_menu" parent="futbol.menu_root" groups="futbol_entrenador" action="futbol.jugador_action_window"/>
+    <menuitem name="Jugadores" id="futbol.jugador_menu" parent="futbol.menu_root" groups="futbol_ojeador" action="futbol.jugador_action_window"/>
+    <menuitem name="Equipos" id="futbol.equipo_menu" parent="futbol.menu_root" groups="futbol_entrenador" action="futbol.equipo_action_window"/>
+    <menuitem name="Equipos" id="futbol.equipo_menu" parent="futbol.menu_root" groups="futbol_ojeador" action="futbol.equipo_action_window"/>
+    <menuitem name="Temporadas" id="futbol.temporada_menu" parent="futbol.menu_root" groups="futbol_entrenador" action="futbol.temporada_action_window"/>
+    <menuitem name="Temporadas" id="futbol.temporada_menu" parent="futbol.menu_root" groups="futbol_ojeador" action="futbol.temporada_action_window"/>
+
+  </data>
+</odoo>

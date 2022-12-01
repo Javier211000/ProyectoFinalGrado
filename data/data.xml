@@ -1,0 +1,62 @@
+<odoo>
+  <data>
+    <record model="futbol.jugador">
+      <field name="name">El Bicho</field>
+      <field name="NombreCompletoJugador">Cristiano Ronaldo</field>
+      <field name="DorsalJugador">1</field>
+      <field name="EdadJugador">22</field>
+      <field name="PosicionJugador">Portero</field>
+      <field name="PiernaBuenaJugador">Diestro</field>
+      <field name="JugadorRetirado">false</field>
+      <field name="URLJugador">https://www.cristianoronaldo.com/#cr7</field>
+    </record>
+    <record model="futbol.jugador">
+      <field name="name">Juanin</field>
+      <field name="NombreCompletoJugador">Juan</field>
+      <field name="DorsalJugador">10</field>
+      <field name="EdadJugador">30</field>
+      <field name="PosicionJugador">Mediocampo Ofensivo</field>
+      <field name="PiernaBuenaJugador">Diestro</field>
+      <field name="JugadorRetirado">false</field>
+    </record>
+    <record model="futbol.jugador">
+      <field name="name">Jorgin</field>
+      <field name="NombreCompletoJugador">Jorge</field>
+      <field name="DorsalJugador">5</field>
+      <field name="EdadJugador">16</field>
+      <field name="PosicionJugador">Defensa Central</field>
+      <field name="PiernaBuenaJugador">Zurdo</field>
+      <field name="JugadorRetirado">true</field>
+    </record>
+    <record model="futbol.jugador">
+      <field name="name">La Pulga</field>
+      <field name="NombreCompletoJugador">Lionel Messi</field>
+      <field name="DorsalJugador">9</field>
+      <field name="EdadJugador">27</field>
+      <field name="PosicionJugador">Delantero Centro</field>
+      <field name="PiernaBuenaJugador">Zurdo</field>
+      <field name="JugadorRetirado">true</field>
+      <field name="URLJugador">https://messi.com/</field>
+    </record>
+    <record model="futbol.equipo">
+      <field name="name">OVI</field>
+      <field name="NombreCompletoEquipo">Real Oviedo</field>
+      <field name="CiudadDelEquipo">Oviedo</field>
+      <field name="ProvinciaDelEquipo">Asturias</field>
+      <field name="SociosDelEquipo">15678</field>
+      <field name="PresupuestoDelEquipo">123456</field>
+      <field name="AnioCreacionEquipo">2022-11-23</field>
+      <field name="URLEquipo">https://www.realoviedo.es/</field>
+    </record>
+    <record model="futbol.equipo">
+      <field name="name">SPO</field>
+      <field name="NombreCompletoEquipo">Real Sporting</field>
+      <field name="CiudadDelEquipo">Gijon</field>
+      <field name="ProvinciaDelEquipo">Asturias</field>
+      <field name="SociosDelEquipo">56789</field>
+      <field name="PresupuestoDelEquipo">87654</field>
+      <field name="AnioCreacionEquipo">2022-11-24</field>
+      <field name="URLEquipo">https://www.realsporting.com/</field>
+    </record>
+  </data>
+</odoo>

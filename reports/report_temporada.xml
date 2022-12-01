@@ -1,0 +1,43 @@
+<odoo>
+  <data>
+      <template id="report_temporada_view">
+        <t t-call="web.html_container">
+          <t t-foreach="docs" t-as="temporada">
+            <t t-call="web.external_layout">
+              <div class="page">
+                <h1>Módulo de Fútbol: Informe de Temporada</h1>
+                <div>
+                  <strong>Registro de Temporada del Jugador y del Equipo:</strong>
+                  <span t-field="temporada.name"/>
+                </div>
+                <div>
+                  <strong>Goles del Jugador en el Equipo:</strong>
+                  <span t-field="temporada.GolesJugadorEquipo"/>
+                </div>
+                <div>
+                  <strong>Asistencias del Jugador en el Equipo:</strong>
+                  <span t-field="temporada.AsistenciasJugadorEquipo"/>
+                </div>
+                <div>
+                  <strong>Goles y Asistencias Totales del Jugador en el Equipo:</strong>
+                  <span t-field="temporada.GolesAsistenciasTotalesJugadorEquipo"/>
+                </div>
+                <div>
+                  <strong>Año de la Temporada:</strong>
+                  <span t-field="temporada.AniosJugadorEquipo"/>
+                </div>
+                <div>
+                  <strong>Código Relacionado de Temporada con Jugador:</strong>
+                  <span t-field="temporada.jugadores"/>
+                </div>
+                <div>
+                  <strong>Código Relacionado de Temporada con Equipo:</strong>
+                  <span t-field="temporada.equipos"/>
+                </div>
+              </div>
+            </t>
+          </t>
+        </t>
+      </template>
+  </data>
+</odoo>

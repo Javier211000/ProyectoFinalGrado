@@ -1,0 +1,47 @@
+<odoo>
+  <data>
+      <template id="report_jugador_view">
+        <t t-call="web.html_container">
+          <t t-foreach="docs" t-as="jugador">
+            <t t-call="web.external_layout">
+              <div class="page">
+                <h1>Módulo de Fútbol: Informe de Jugador</h1>
+                <div>
+                  <strong>Código del Jugador:</strong>
+                  <span t-field="jugador.name"/>
+                </div>
+                <div>
+                  <strong>Nombre Completo del Jugador:</strong>
+                  <span t-field="jugador.NombreCompletoJugador"/>
+                </div>
+                <div>
+                  <strong>Dorsal del Jugador:</strong>
+                  <span t-field="jugador.DorsalJugador"/>
+                </div>
+                <div>
+                  <strong>Edad del Jugador:</strong>
+                  <span t-field="jugador.EdadJugador"/>
+                </div>
+                <div>
+                  <strong>Posición del Jugador:</strong>
+                  <span t-field="jugador.PosicionJugador"/>
+                </div>
+                <div>
+                  <strong>Pierna Buena del Jugador:</strong>
+                  <span t-field="jugador.PiernaBuenaJugador"/>
+                </div>
+                <div>
+                  <strong>Jugador Retirado:</strong>
+                  <span t-field="jugador.JugadorRetirado"/>
+                </div>
+                <div>
+                  <strong>Web Personal del Jugador:</strong>
+                  <span t-field="jugador.URLJugador"/>
+                </div>
+              </div>
+            </t>
+          </t>
+        </t>
+      </template>
+  </data>
+</odoo>
